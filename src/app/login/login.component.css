@@ -1,0 +1,47 @@
+.text-center {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 73px;
+    padding-bottom: 40px;
+  }
+  
+  .form-login {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  .form-login .form-control {
+    background-color: transparent;
+    border-color: #38cec1;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
+  .form-login button {
+      border-radius: 10px;
+      margin-bottom: 20px;
+      background-color: #67e6db;
+      color: white;
+      font-family: Verdana;
+  }
+  
+  .form-login button:hover {
+      background-color: #05a598;
+      border: transparent;
+      font-family: Verdana;
+  }
+  

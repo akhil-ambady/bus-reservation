@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <div class="topnav-centered">
+        <a class="active">User</a>
+    </div>
+    <button class="btn btn-md btn-secondary" (click)="logout()">Logout</button>
+</nav>
+
+<div class="text-center">
+    <div class="form-login">
+        <div class="card m-2 mat-elevation-z11">
+            <div class="card-body">
+                <label class="label">Seat Status</label>
+
+                <table style="width:100%">
+                    <tr>
+                        <th>Number of seats booked</th>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th>Number of seats available</th>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th>Driver Name</th>
+                        <td>Sharath</td>
+                    </tr>
+                    <tr>
+                        <th>Contact Number</th>
+                        <td>9638527412</td>
+                    </tr>
+                    <tr>
+                        <th>Number of Stops</th>
+                        <td>6</td>
+                    </tr>
+                </table>
+                <button class="btn btn-sm btn-secondary" style="margin-top: 20px;" (click)="book()">Book Seats</button>
+            </div>
+        </div>
+    </div>
+</div>

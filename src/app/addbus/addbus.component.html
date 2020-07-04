@@ -1,0 +1,124 @@
+<div class="card m-3 mat-elevation-z12">
+    <div class="card-body">
+        <div class="text-center">
+            <form [formGroup]="form" (ngSubmit)="onSave()">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="label">Bus Name</label>
+                        <input type="text" formControlName="busID" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.busID.errors }" />
+                        <div *ngIf="submitted && f.busID.errors" class="invalid-feedback">
+                            <div *ngIf="f.busID.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label">Bus Type</label>
+                        <select formControlName="bustype" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.bustype.errors }">
+                            <option value="AC">AC</option>
+                            <option value="NonAC">Non AC</option>
+                        </select>
+                        <div *ngIf="submitted && f.bustype.errors" class="invalid-feedback">
+                            <div *ngIf="f.bustype.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="label">From</label>
+                        <select formControlName="district" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.district.errors }">
+                            <option value="TVM">Thiruvananthapuram</option>
+                            <option value="KLM">Kollam</option>
+                            <option value="PTA">Pathanamthitta</option>
+                            <option value="APLY">Allapuzha</option>
+                            <option value="KTYM">Kottayam</option>
+                            <option value="IDK">Idukki</option>
+                            <option value="EKM">Ernakulam</option>
+                            <option value="TSR">Thrissur</option>
+                            <option value="PLKD">Palakad</option>
+                            <option value="MLPM">Malappuram</option>
+                            <option value="CLT">Calicut</option>
+                            <option value="WYND">Wayanad</option>
+                            <option value="KNR">Kannur</option>
+                            <option value="KSD">Kasaragod</option>
+                        </select>
+                        <div *ngIf="submitted && f.district.errors" class="invalid-feedback">
+                            <div *ngIf="f.district.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label">TO</label>
+                        <select formControlName="district1" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.district1.errors }">
+                            <option value="TVM">Thiruvananthapuram</option>
+                            <option value="KLM">Kollam</option>
+                            <option value="PTA">Pathanamthitta</option>
+                            <option value="APLY">Allapuzha</option>
+                            <option value="KTYM">Kottayam</option>
+                            <option value="IDK">Idukki</option>
+                            <option value="EKM">Ernakulam</option>
+                            <option value="TSR">Thrissur</option>
+                            <option value="PLKD">Palakad</option>
+                            <option value="MLPM">Malappuram</option>
+                            <option value="CLT">Calicut</option>
+                            <option value="WYND">Wayanad</option>
+                            <option value="KNR">Kannur</option>
+                            <option value="KSD">Kasaragod</option>
+                        </select>
+                        <div *ngIf="submitted && f.district1.errors" class="invalid-feedback">
+                            <div *ngIf="f.district1.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label">Arrival Time</label>
+                        <select formControlName="time" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.time.errors }">
+                            <option value="4.00PM">4.00 PM</option>
+                            <option value="5.00PM">5.00 PM</option>
+                            <option value="8.00PM">8.00 PM</option>
+                            <option value="9.00PM">9.00 PM</option>
+                            <option value="1.000PM">10.00 PM</option>
+                        </select>
+                        <div *ngIf="submitted && f.time.errors" class="invalid-feedback">
+                            <div *ngIf="f.time.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label">Departure time</label>
+                        <select formControlName="time1" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.time1.errors }">
+                            <option value="4.15PM">4.15 PM</option>
+                            <option value="5.15PM">5.15 PM</option>
+                            <option value="8.30PM">8.30 PM</option>
+                            <option value="9.30PM">9.30 PM</option>
+                            <option value="10.30PM">10.30 PM</option>
+                        </select>
+                        <div *ngIf="submitted && f.time1.errors" class="invalid-feedback">
+                            <div *ngIf="f.time1.errors.required">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label class="label">Fare</label>
+                        <input type="number" formControlName="fare" class="form-control" min="0"
+                            [ngClass]="{ 'is-invalid': submitted && f.fare.errors }" />
+                        <div *ngIf="submitted && f.fare.errors" class="invalid-feedback">
+                            <div *ngIf="f.fare.errors.required">This field is required</div>
+                            <div *ngIf="f.fare.errors.pattern">Input should not be negative numbers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="button1 btn btn-secondary" type="reset" (click)="onReset()">
+                        Clear
+                    </button>
+                    <button class="button btn btn-primary" type="submit">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

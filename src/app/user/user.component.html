@@ -1,0 +1,90 @@
+<nav class="navbar">
+    <div class="topnav-centered">
+        <a class="active">User</a>
+    </div>
+    <button class="btn btn-md btn-secondary" (click)="logout()">Logout</button>
+</nav>
+
+<div class="text-center">
+    <div class="form-login">
+        <div class="card m-2 mat-elevation-z11">
+            <div class="card-body">
+                <label class="label">Book Ticket</label>
+                <form [formGroup]="form" (ngSubmit)="onFind()">
+                    <div class="form-group">
+                        <label for="">Origin</label>
+                        <select formControlName="origin" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.origin.errors }">
+                            <option value="TVM">Thiruvananthapuram</option>
+                            <option value="KLM">Kollam</option>
+                            <option value="PTA">Pathanamthitta</option>
+                            <option value="APLY">Allapuzha</option>
+                            <option value="KTYM">Kottayam</option>
+                            <option value="IDK">Idukki</option>
+                            <option value="EKM">Ernakulam</option>
+                            <option value="TSR">Thrissur</option>
+                            <option value="PLKD">Palakad</option>
+                            <option value="MLPM">Malappuram</option>
+                            <option value="CLT">Calicut</option>
+                            <option value="WYND">Wayanad</option>
+                            <option value="KNR">Kannur</option>
+                            <option value="KSD">Kasaragod</option>
+                        </select>
+                        <div *ngIf="submitted && f.origin.errors" class="invalid-feedback">
+                            <div *ngIf="f.origin.errors.required">This field is required</div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Destination</label>
+                        <select formControlName="dest" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.dest.errors }">
+                            <option value="TVM">Thiruvananthapuram</option>
+                            <option value="KLM">Kollam</option>
+                            <option value="PTA">Pathanamthitta</option>
+                            <option value="APLY">Allapuzha</option>
+                            <option value="KTYM">Kottayam</option>
+                            <option value="IDK">Idukki</option>
+                            <option value="EKM">Ernakulam</option>
+                            <option value="TSR">Thrissur</option>
+                            <option value="PLKD">Palakad</option>
+                            <option value="MLPM">Malappuram</option>
+                            <option value="CLT">Calicut</option>
+                            <option value="WYND">Wayanad</option>
+                            <option value="KNR">Kannur</option>
+                            <option value="KSD">Kasaragod</option>
+                        </select>
+                        <div *ngIf="submitted && f.dest.errors" class="invalid-feedback">
+                            <div *ngIf="f.dest.errors.required">This field is required</div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Select Date    </label>
+                        <input type="date" formControlName="date" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                            <div *ngIf="f.date.errors.required">This field is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Number of seats</label>
+                        <input type="number" formControlName="seats" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.seats.errors }">
+                        <div *ngIf="submitted && f.seats.errors" class="invalid-feedback">
+                            <div *ngIf="f.seats.errors.required">This field is required</div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-lg btn-light btn-block" type="submit">
+                        Find Bus
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

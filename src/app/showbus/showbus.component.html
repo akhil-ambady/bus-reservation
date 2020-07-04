@@ -1,0 +1,76 @@
+<div class="card mat-elevation-z12 m-3" style="overflow-x:auto;">
+    <div class="card-body">
+        <Button class="btn btn-secondary" (click)="onload()">Load data</Button>      
+        <table class="table1">
+          <thead>
+            <tr>
+              <th scope="col">Bus Name</th>
+              <th scope="col">From</th>
+              <th scope="col">TO</th>
+              <th scope="col">Arrival Time</th>
+              <th scope="col">Departure Time</th>
+              <th scope="col">Type</th>
+              <th scope="col">Fare</th>
+            </tr>
+          </thead>
+          <tbody>
+              <ng-container *ngFor = "let payload of arrpayload">
+                <tr>
+                  <td>{{ payload.busID }}</td>
+                  <td>{{ payload.district }}</td>
+                  <td>{{ payload.district1 }}</td>  
+                  <td>{{ payload.time }}</td>
+                  <td>{{ payload.time1 }}</td>
+                  <td>{{ payload.bustype }}</td>
+                  <td>{{ payload.fare }} INR</td>
+                </tr>
+              </ng-container>
+              <!-- <tr>
+                <td>Scania 2</td>
+                <td>Ernakulam</td>
+                <td>Kozhikode</td>  
+                <td>5.00 PM</td>
+                <td>5.15 PM</td>
+                <td>Non AC</td>
+                <td>350 INR</td>
+              </tr>
+              <tr>
+                <td>Volvo 1</td>
+                <td>Kozhikode</td>
+                <td>Thiruvananthapuram</td>  
+                <td>8.00 PM</td>
+                <td>8.30 PM</td>
+                <td>AC</td>
+                <td>650 INR</td>
+              </tr>
+              <tr>
+                <td>Volvo 2</td>
+                <td>Kottayam</td>
+                <td>Kollam</td>  
+                <td>10.00 PM</td>
+                <td>10.30 PM</td>
+                <td>AC</td>
+                <td>450 INR</td>
+              </tr>
+              <tr>
+                <td>Scania 3</td>
+                <td>Malapuram</td>
+                <td>Ernakulam</td>  
+                <td>4.00 PM</td>
+                <td>4.15 PM</td>
+                <td>AC</td>
+                <td>450 INR</td>
+              </tr>
+              <tr>
+                <td>Volvo 3 1</td>
+                <td>Thiruvananthapuram</td>
+                <td>Thrissur</td>  
+                <td>9.00 PM</td>
+                <td>9.30 PM</td>
+                <td>Non AC</td>
+                <td>500 INR</td>
+              </tr> -->
+          </tbody>
+        </table>        
+    </div>    
+  </div>  

@@ -1,0 +1,49 @@
+.text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+   .form-control {
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-color: #38cec1;
+    color: rgb(82, 80, 80);
+    padding: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .button {
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #67e6db;
+    color: black;
+  } 
+  
+  .button:hover {
+    background-color: #07978b;
+    color: white;
+  }
+  
+  .button1 {
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 0;
+    background-color: gainsboro;
+    color: black;
+  } 
+  
+  .button1:hover {
+    background-color: rgb(107, 106, 106);
+    color: white;
+  }
+  
+  
+  

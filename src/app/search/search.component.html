@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <div class="topnav-centered">
+        <a class="active">User</a>
+    </div>
+    <button class="btn btn-md btn-secondary" (click)="logout()">Logout</button>
+</nav>
+
+<div class="card mat-elevation-z12 m-3" style="overflow-x:auto;">
+    <div class="card-body">
+        <Button class="btn btn-secondary" (click)="onload()">Load data</Button>      
+        <table class="table1">
+          <thead>
+            <tr>
+              <th scope="col">Bus Name</th>
+              <th scope="col">From</th>
+              <th scope="col">TO</th>
+              <th scope="col">Arrival Time</th>
+              <th scope="col">Departure Time</th>
+              <th scope="col">Type</th>
+              <th scope="col">Fare</th>
+              <th scope="col">Select</th>
+            </tr>
+          </thead>
+          <tbody>
+              <ng-container *ngFor = "let data of datas">
+                <tr>
+                  <td>{{data.busID}}</td>
+                  <td>{{data.district}}</td>
+                  <td>{{data.district1}}</td>  
+                  <td>{{data.time}}</td>
+                  <td>{{data.time1}}</td>
+                  <td>{{data.bustype}}</td>
+                  <td>{{data.fare}} INR</td>
+                  <td><button class="btn btn-sm" (click)="select()">Select seats</button></td>
+                </tr>
+              </ng-container>
+          </tbody>
+        </table>        
+    </div>    
+  </div>  

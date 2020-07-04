@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="topnav-centered">
+      <a class="active">Admin</a>
+    </div>
+    <button class="btn btn-md btn-secondary" (click)="logout()">Logout</button>
+</nav>
+
+<mat-tab-group>
+    <mat-tab label="Add Bus">
+        <app-addbus></app-addbus>
+    </mat-tab>
+    <mat-tab label="List of Buses">
+        <app-showbus></app-showbus>
+    </mat-tab>
+</mat-tab-group>
